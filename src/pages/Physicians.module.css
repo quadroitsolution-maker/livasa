@@ -1,0 +1,197 @@
+.physiciansContainer {
+  padding-top: 4rem;
+}
+
+.hero {
+  background: var(--primary-dark);
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Benefits Section */
+.benefitsSection {
+  background: var(--bg-color);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.benefitCard {
+  background: var(--surface-color);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  border-top: 4px solid var(--primary-blue);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefitIcon {
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.benefitCard h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.benefitCard p {
+  color: var(--text-muted);
+}
+
+/* Referral Section */
+.referralSection {
+  background: var(--surface-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.referralContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+  .referralContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.referralInfo h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.referralInfo p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.downloadCard {
+  background: rgba(132, 163, 227, 0.05);
+  border: 1px solid rgba(132, 163, 227, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.downloadCard div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.downloadCard h4 {
+  margin: 0;
+  color: var(--primary-dark);
+}
+
+.downloadCard p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.downloadIcon {
+  color: var(--primary-blue);
+  background: white;
+  padding: 0.5rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+}
+
+.formCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-premium);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.formCard h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  background-color: #f8fafc;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(132, 163, 227, 0.2);
+  background-color: white;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .formRow {
+    grid-template-columns: 1fr 1fr;
+  }
+}

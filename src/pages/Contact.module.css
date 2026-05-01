@@ -1,0 +1,142 @@
+.contactContainer {
+  padding-top: 4rem;
+}
+
+.hero {
+  background: var(--bg-color);
+  padding: 5rem 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 992px) {
+  .contactContent {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contactInfoCard {
+  background: var(--surface-color);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.infoItem:last-child {
+  margin-bottom: 0;
+}
+
+.infoIcon {
+  color: var(--primary-blue);
+  background: rgba(132, 163, 227, 0.1);
+  padding: 1rem;
+  border-radius: var(--radius-full);
+}
+
+.infoText h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+.infoText p {
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 300px;
+  background: #e2e8f0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  background: linear-gradient(135deg, rgba(132, 163, 227, 0.1), rgba(121, 217, 171, 0.1));
+}
+
+.contactFormCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-premium);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.contactFormCard h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contactFormCard > p {
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  background-color: #f8fafc;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(121, 217, 171, 0.2);
+  background-color: white;
+}
