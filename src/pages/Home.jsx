@@ -1,5 +1,9 @@
 import { ArrowRight, Activity, ShieldCheck, Clock, Users } from 'lucide-react';
 import Button from '../components/Button';
+import gallery1 from '../assets/gallery/gallery-1.jpg';
+import gallery2 from '../assets/gallery/gallery-2.jpg';
+import gallery3 from '../assets/gallery/gallery-3.jpg';
+import gallery4 from '../assets/gallery/gallery-4.jpg';
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -66,6 +70,30 @@ export default function Home() {
               <div className={styles.featureIcon}><Users size={32} /></div>
               <h3>Compassionate Care</h3>
               <p>From the moment you walk in, our expert staff ensures a comfortable, supportive, and safe environment.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className={`section-padding ${styles.gallerySection}`}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2>Our Facility</h2>
+            <p>Take a look at our state-of-the-art diagnostic center.</p>
+          </div>
+          <div className={styles.galleryGrid}>
+            <div className={styles.galleryItem}>
+              <img src={gallery1} alt="Facility View 1" />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={gallery2} alt="Facility View 2" />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={gallery3} alt="Facility View 3" />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={gallery4} alt="Facility View 4" />
             </div>
           </div>
         </div>
