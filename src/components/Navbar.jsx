@@ -45,9 +45,9 @@ export default function Navbar() {
             ))}
           </ul>
           <div className={styles.navActions}>
-            <a href="tel:+1234567890" className={styles.phoneLink}>
+            <a href="tel:+918078880788" className={styles.phoneLink}>
               <Phone size={18} />
-              <span>1-800-511-SCAN</span>
+              <span>+91 80788 80788</span>
             </a>
             <Link to="/book" className={styles.bookBtn}>
               Book Appointment

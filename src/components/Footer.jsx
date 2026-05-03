@@ -52,15 +52,15 @@ export default function Footer() {
           <h3>Contact Us</h3>
           <div className={styles.contactItem}>
             <MapPin size={20} className={styles.contactIcon} />
-            <p>123 Medical Parkway, Suite 511<br />Healthville, MD 12345</p>
+            <p>SCO 38, Livasa MedCentre,<br />Sector 71, SAS Nagar (Mohali),<br />Punjab - 160071</p>
           </div>
           <div className={styles.contactItem}>
             <Phone size={20} className={styles.contactIcon} />
-            <p>1-800-511-SCAN (7226)<br />Mon-Sat: 7:00 AM - 7:00 PM</p>
+            <p>+91 80788 80788<br />+91 74285 94511<br />Mon-Sat: 7:00 AM - 7:00 PM</p>
           </div>
           <div className={styles.contactItem}>
             <Mail size={20} className={styles.contactIcon} />
-            <p>info@511scans.com</p>
+            <p>info@livasamedcare.com</p>
           </div>
         </div>
       </div>
