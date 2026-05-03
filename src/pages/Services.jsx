@@ -1,4 +1,4 @@
-import { Brain, Heart, Bone, Stethoscope, Microscope, CheckCircle, ArrowRight } from 'lucide-react';
+import { Brain, Heart, Stethoscope, Microscope, CheckCircle, ArrowRight } from 'lucide-react';
 import Button from '../components/Button';
 import styles from './Services.module.css';
 
@@ -16,64 +16,50 @@ export default function Services() {
       {/* Services Grid Section */}
       <section className="section-padding container">
         <div className={styles.servicesGrid}>
-          {/* Oncology */}
+          {/* Oncology PET-CT */}
           <div className={styles.serviceCard}>
             <div className={styles.iconWrapper}>
               <Microscope size={32} />
             </div>
-            <h3>Oncology Imaging</h3>
-            <p>Early detection, staging, and monitoring of various cancers. Our advanced PET-CT scans provide precise metabolic and anatomical information to guide oncological treatments.</p>
+            <h3>Oncology PET-CT</h3>
+            <p>Comprehensive whole-body PET-CT scans for early cancer detection, accurate staging, and therapy response monitoring — empowering oncologists to make the best treatment decisions.</p>
             <ul className={styles.serviceFeatures}>
-              <li><CheckCircle size={16} /> Tumor localization</li>
-              <li><CheckCircle size={16} /> Treatment response monitoring</li>
-              <li><CheckCircle size={16} /> Radiation therapy planning</li>
+              <li><CheckCircle size={16} /> Whole-body PET-CT scans</li>
+              <li><CheckCircle size={16} /> Cancer staging &amp; restaging</li>
+              <li><CheckCircle size={16} /> Therapy response monitoring</li>
+              <li><CheckCircle size={16} /> Recurrence detection</li>
             </ul>
             <Button to="/book" variant="outline">Book Oncology Scan</Button>
           </div>
 
-          {/* Neurology */}
-          <div className={styles.serviceCard}>
-            <div className={styles.iconWrapper}>
-              <Brain size={32} />
-            </div>
-            <h3>Neurology Imaging</h3>
-            <p>Detailed evaluation of brain function and structure. Essential for diagnosing and managing neurological disorders such as Alzheimer's, epilepsy, and brain tumors.</p>
-            <ul className={styles.serviceFeatures}>
-              <li><CheckCircle size={16} /> Dementia evaluation</li>
-              <li><CheckCircle size={16} /> Seizure focus localization</li>
-              <li><CheckCircle size={16} /> Brain tumor assessment</li>
-            </ul>
-            <Button to="/book" variant="outline">Book Neurology Scan</Button>
-          </div>
-
-          {/* Cardiology */}
+          {/* Cardiac PET */}
           <div className={styles.serviceCard}>
             <div className={styles.iconWrapper}>
               <Heart size={32} />
             </div>
-            <h3>Cardiology Imaging</h3>
-            <p>Assessment of myocardial viability and blood flow. Helps in determining the best course of action for patients with coronary artery disease and heart conditions.</p>
+            <h3>Cardiac PET</h3>
+            <p>Advanced cardiac PET imaging for precise evaluation of myocardial viability, cardiac sarcoidosis, and infective endocarditis — helping cardiologists plan the most effective interventions.</p>
             <ul className={styles.serviceFeatures}>
               <li><CheckCircle size={16} /> Myocardial viability assessment</li>
               <li><CheckCircle size={16} /> Cardiac sarcoidosis evaluation</li>
-              <li><CheckCircle size={16} /> Infection imaging</li>
+              <li><CheckCircle size={16} /> Infective endocarditis imaging</li>
             </ul>
-            <Button to="/book" variant="outline">Book Cardiology Scan</Button>
+            <Button to="/book" variant="outline">Book Cardiac Scan</Button>
           </div>
 
-          {/* Orthopedics / Bone */}
+          {/* Neurological PET */}
           <div className={styles.serviceCard}>
             <div className={styles.iconWrapper}>
-              <Bone size={32} />
+              <Brain size={32} />
             </div>
-            <h3>Bone Imaging</h3>
-            <p>Highly sensitive whole-body imaging to detect skeletal metastases and other bone-related pathologies earlier than conventional scans.</p>
+            <h3>Neurological PET</h3>
+            <p>Detailed evaluation of brain function and structure for diagnosing and managing neurological disorders including dementia, brain tumors, and epilepsy-related seizure assessment.</p>
             <ul className={styles.serviceFeatures}>
-              <li><CheckCircle size={16} /> Metastatic disease detection</li>
-              <li><CheckCircle size={16} /> Unexplained bone pain</li>
-              <li><CheckCircle size={16} /> Infection and inflammation</li>
+              <li><CheckCircle size={16} /> Dementia evaluation</li>
+              <li><CheckCircle size={16} /> Brain tumor assessment</li>
+              <li><CheckCircle size={16} /> Seizure focus localization</li>
             </ul>
-            <Button to="/book" variant="outline">Book Bone Scan</Button>
+            <Button to="/book" variant="outline">Book Neuro Scan</Button>
           </div>
 
           {/* General Diagnostics */}
@@ -82,13 +68,13 @@ export default function Services() {
               <Stethoscope size={32} />
             </div>
             <h3>General Diagnostics</h3>
-            <p>Versatile imaging for various systemic conditions, infections, and fever of unknown origin. Providing clarity when conventional imaging falls short.</p>
+            <p>Versatile PET-CT imaging for infection and inflammation assessment, recurrence detection, and treatment response follow-ups — providing clarity when conventional imaging falls short.</p>
             <ul className={styles.serviceFeatures}>
-              <li><CheckCircle size={16} /> Fever of unknown origin</li>
-              <li><CheckCircle size={16} /> Infection localization</li>
-              <li><CheckCircle size={16} /> Vasculitis assessment</li>
+              <li><CheckCircle size={16} /> Infection &amp; inflammation assessment</li>
+              <li><CheckCircle size={16} /> Recurrence detection</li>
+              <li><CheckCircle size={16} /> Treatment response follow-ups</li>
             </ul>
-            <Button to="/book" variant="outline">Book General Scan</Button>
+            <Button to="/book" variant="outline">Book Diagnostic Scan</Button>
           </div>
         </div>
       </section>

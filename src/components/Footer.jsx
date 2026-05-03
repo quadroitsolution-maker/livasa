@@ -39,11 +39,10 @@ export default function Footer() {
         <div className={styles.linksCol}>
           <h3>Services</h3>
           <ul>
-            <li><Link to="/services#pet-ct">Whole Body PET-CT</Link></li>
-            <li><Link to="/services#cardiac">Cardiac PET</Link></li>
-            <li><Link to="/services#neuro">Neuro PET</Link></li>
-            <li><Link to="/services#psma">PSMA PET-CT</Link></li>
-            <li><Link to="/services#fdg">FDG PET-CT</Link></li>
+            <li><Link to="/services">Oncology PET-CT</Link></li>
+            <li><Link to="/services">Cardiac PET</Link></li>
+            <li><Link to="/services">Neurological PET</Link></li>
+            <li><Link to="/services">General Diagnostics</Link></li>
           </ul>
         </div>
 
