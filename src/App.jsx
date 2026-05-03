@@ -7,6 +7,7 @@ import Patients from './pages/Patients';
 import Physicians from './pages/Physicians';
 import Contact from './pages/Contact';
 import Book from './pages/Book';
+import Gallery from './pages/Gallery';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/physicians" element={<Physicians />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/book" element={<Book />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
         <Footer />

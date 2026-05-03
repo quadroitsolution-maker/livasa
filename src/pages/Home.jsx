@@ -3,7 +3,6 @@ import Button from '../components/Button';
 import gallery1 from '../assets/gallery/gallery-1.jpg';
 import gallery2 from '../assets/gallery/gallery-2.jpg';
 import gallery3 from '../assets/gallery/gallery-3.jpg';
-import gallery4 from '../assets/gallery/gallery-4.jpg';
 import styles from './Home.module.css';
 
 export default function Home() {
@@ -75,26 +74,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Gallery CTA */}
       <section className={`section-padding ${styles.gallerySection}`}>
         <div className="container">
           <div className={styles.sectionHeader}>
             <h2>Our Facility</h2>
             <p>Take a look at our state-of-the-art diagnostic center.</p>
           </div>
-          <div className={styles.galleryGrid}>
-            <div className={styles.galleryItem}>
-              <img src={gallery1} alt="Facility View 1" />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={gallery2} alt="Facility View 2" />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={gallery3} alt="Facility View 3" />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={gallery4} alt="Facility View 4" />
-            </div>
+          <div className={styles.galleryPreview}>
+            <img src={gallery1} alt="PET-CT Scanner" className={styles.previewImg} />
+            <img src={gallery2} alt="Livasa Med Centre" className={styles.previewImg} />
+            <img src={gallery3} alt="Waiting Area" className={styles.previewImg} />
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <Button to="/gallery" variant="secondary">View Full Gallery</Button>
           </div>
         </div>
       </section>

@@ -22,6 +22,7 @@ export default function Navbar() {
     { name: 'For Patients', path: '/patients' },
     { name: 'For Physicians', path: '/physicians' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Gallery', path: '/gallery' },
   ];
 
   return (
