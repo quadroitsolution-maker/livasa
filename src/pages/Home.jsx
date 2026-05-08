@@ -42,6 +42,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Overview Section */}
+      <section className={`section-padding ${styles.aboutSection}`}>
+        <div className="container">
+          <div className={styles.aboutContent}>
+            <h2>511 Scans: The PET CT Centre</h2>
+            <p className={styles.aboutHighlight}>
+              A state-of-the-art nuclear medicine facility, now open in Sector 71, Mohali.
+            </p>
+            
+            <p className={styles.aboutEquipped}>Our centre is equipped to offer:</p>
+            
+            <div className={styles.offeringsGrid}>
+              <div className={styles.offeringCard}>
+                <div className={styles.offeringHeader}>
+                  <span className={styles.offeringEmoji}>🔬</span>
+                  <h3>Diagnostic Services</h3>
+                </div>
+                <ul>
+                  <li>Comprehensive PET CT Scans</li>
+                </ul>
+              </div>
+              
+              <div className={styles.offeringCard}>
+                <div className={styles.offeringHeader}>
+                  <span className={styles.offeringEmoji}>💉</span>
+                  <h3>Therapeutic Services</h3>
+                </div>
+                <ul>
+                  <li>Radionuclide Ligand Therapy (RLT)</li>
+                  <li>I-131 Therapy</li>
+                </ul>
+              </div>
+              
+              <div className={styles.offeringCard}>
+                <div className={styles.offeringHeader}>
+                  <span className={styles.offeringEmoji}>💳</span>
+                  <h3>Payment Options</h3>
+                </div>
+                <ul>
+                  <li>Self-Pay</li>
+                  <li>Cashless (Insurance &amp; Empanelled)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className={`section-padding ${styles.features}`}>
         <div className="container">

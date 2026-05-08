@@ -1,4 +1,4 @@
-import { Brain, Heart, Stethoscope, Microscope, CheckCircle, ArrowRight } from 'lucide-react';
+import { Brain, Heart, Stethoscope, Microscope, CheckCircle, ArrowRight, Activity, ShieldCheck } from 'lucide-react';
 import Button from '../components/Button';
 import styles from './Services.module.css';
 
