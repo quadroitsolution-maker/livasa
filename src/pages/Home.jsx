@@ -1,6 +1,6 @@
 import { ArrowRight, Activity, ShieldCheck, Clock, Users } from 'lucide-react';
 import Button from '../components/Button';
-import gallery1 from '../assets/gallery/gallery-1.jpg';
+import gallery1 from '../assets/gallery/gallery-12.jpg';
 import gallery2 from '../assets/gallery/gallery-2.jpg';
 import gallery3 from '../assets/gallery/gallery-3.jpg';
 import styles from './Home.module.css';
