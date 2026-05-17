@@ -70,9 +70,7 @@ export default function Gallery() {
                 onClick={() => openLightbox(index)}
               >
                 <img src={image.src} alt={image.alt} loading="lazy" />
-                <div className={styles.imageOverlay}>
-                  <span className={styles.caption}>{image.caption}</span>
-                </div>
+                <div className={styles.imageOverlay}></div>
               </div>
             ))}
           </div>
@@ -96,9 +94,6 @@ export default function Gallery() {
               src={galleryImages[lightbox.index].src}
               alt={galleryImages[lightbox.index].alt}
             />
-            <p className={styles.lightboxCaption}>
-              {galleryImages[lightbox.index].caption}
-            </p>
           </div>
           <button
             className={`${styles.lightboxNav} ${styles.lightboxNext}`}
