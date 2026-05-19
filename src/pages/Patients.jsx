@@ -176,16 +176,6 @@ export default function Patients() {
         </div>
       </section>
 
-      {/* Download Prep Section */}
-      <section className={`section-padding ${styles.prepSection}`}>
-        <div className="container">
-          <h2>Preparation Guidelines</h2>
-          <p>Download our comprehensive patient preparation guide to ensure you are ready for your appointment.</p>
-          <Button variant="secondary" icon={<Download size={20} />}>
-            Download Patient Guide (PDF)
-          </Button>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className={`section-padding ${styles.faqSection}`}>
