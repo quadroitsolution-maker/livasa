@@ -195,3 +195,131 @@
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Information for Physicians Section */
+.infoSection {
+  background-color: #f8fafc;
+}
+
+.infoHeader {
+  margin-bottom: 3rem;
+}
+
+.infoHeader h2 {
+  font-size: 2rem;
+  color: #1e3a5f;
+  margin-bottom: 0.5rem;
+  font-family: serif;
+}
+
+.headerDivider {
+  height: 2px;
+  width: 40px;
+  background-color: #d4af37;
+  margin-bottom: 1rem;
+}
+
+.infoHeader p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.infoCard {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.infoCard h3 {
+  font-size: 1.25rem;
+  color: #1e3a5f;
+  margin-bottom: 1.5rem;
+  font-family: serif;
+}
+
+.infoList {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.infoList li {
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.contactText {
+  margin-top: 1.5rem;
+  color: #0e7490;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Quick Indication Reference Section */
+.referenceSection {
+  background-color: white;
+}
+
+.referenceTitle {
+  font-size: 1.75rem;
+  color: #1e3a5f;
+  margin-bottom: 2rem;
+  font-family: serif;
+}
+
+.tableResponsive {
+  overflow-x: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.referenceTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.referenceTable th {
+  background-color: #0b1f3a;
+  color: white;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.referenceTable td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.referenceTable tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.referenceTable tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+.referenceTable tbody tr:last-child td {
+  border-bottom: none;
+}

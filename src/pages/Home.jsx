@@ -1,4 +1,5 @@
 import { ArrowRight, Activity, ShieldCheck, Clock, Users } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Button from '../components/Button';
 import gallery1 from '../assets/gallery/gallery-12.jpg';
 import gallery2 from '../assets/gallery/gallery-2.jpg';
@@ -8,6 +9,10 @@ import styles from './Home.module.css';
 export default function Home() {
   return (
     <div className={styles.homeContainer}>
+      <Helmet>
+        <title>511 Scans | Advanced PET-CT & Nuclear Medicine in Mohali</title>
+        <meta name="description" content="Mohali's trusted PET-CT and nuclear medicine centre — bringing molecular imaging and radioligand therapy closer to every patient." />
+      </Helmet>
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroBackground}>
@@ -21,7 +26,7 @@ export default function Home() {
               Precision In <span className="text-gradient">Every Pixel</span>
             </h1>
             <p className={styles.subtitle}>
-              Livasa Med Care’s premium PET-CT diagnostic center. We combine advanced technology with compassionate care for early detection and unparalleled accuracy.
+              Mohali's trusted PET-CT and nuclear medicine centre — bringing molecular imaging and radioligand therapy closer to every patient.
             </p>
             <div className={styles.heroActions}>
               <Button to="/book" variant="primary" icon={<ArrowRight size={20} />}>
@@ -97,26 +102,50 @@ export default function Home() {
             <h2>Why Choose 511 Scans?</h2>
             <p>Setting the standard for medical imaging with clarity, speed, and care.</p>
           </div>
-          <div className={styles.featuresGrid}>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}><Activity size={32} /></div>
-              <h3>Advanced PET-CT</h3>
-              <p>Our latest generation scanners provide ultra-high resolution images, identifying metabolic changes at the cellular level.</p>
+          <div className={styles.missionVisionGrid}>
+            <div className={styles.missionVisionCard}>
+              <h3>Our Mission</h3>
+              <p>To deliver accurate, timely, and patient-centred nuclear medicine diagnostics and therapies that empower physicians and guide life-changing treatment decisions — making advanced imaging and targeted treatment accessible to all patients across India.</p>
             </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}><ShieldCheck size={32} /></div>
-              <h3>Uncompromised Accuracy</h3>
-              <p>Precision diagnostics help your physicians make informed decisions for targeted and effective treatment plans.</p>
+            <div className={styles.missionVisionCard}>
+              <h3>Our Vision</h3>
+              <p>To be the region's leading nuclear medicine centre — recognised for clinical excellence, technological innovation, and compassionate patient care — shaping the future of molecular diagnostics and theranostics in South Asia.</p>
             </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}><Clock size={32} /></div>
-              <h3>Faster Results</h3>
-              <p>We prioritize your time and peace of mind with streamlined workflows that deliver accurate reports faster.</p>
+            <div className={styles.valuesCard}>
+              <h3>Our Core Values</h3>
+              <ul className={styles.valuesList}>
+                <li>Clinical Excellence</li>
+                <li>Patient Safety</li>
+                <li>Integrity</li>
+                <li>Compassion</li>
+                <li>Innovation</li>
+                <li>Accuracy</li>
+                <li>Accessibility</li>
+                <li>Collaboration</li>
+              </ul>
+              <p className={styles.valuesFooter}>
+                We believe that every patient deserves clear answers and dignified care. We work hand-in-hand with referring physicians to ensure our imaging and therapy findings translate into better outcomes — never just a report, but a clinical partnership.
+              </p>
             </div>
-            <div className={styles.featureCard}>
-              <div className={styles.featureIcon}><Users size={32} /></div>
-              <h3>Compassionate Care</h3>
-              <p>From the moment you walk in, our expert staff ensures a comfortable, supportive, and safe environment.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why the Name Section */}
+      <section className={`section-padding ${styles.whyNameSection}`}>
+        <div className="container">
+          <div className={styles.whyNameBanner}>
+            <div className={styles.whyNameContent}>
+              <h2>Why the name <span className={styles.highlightName}>511 Scans</span>?</h2>
+              <p>
+                In Positron Emission Tomography (PET), when a positron annihilates with an electron, it releases two gamma rays each carrying exactly <span className={styles.highlightText}>511 keV</span> of energy — fired in opposite directions. This is the fundamental physics behind every PET scan we perform. Our name honours this principle: precision born from science, visualised for healing.
+              </p>
+            </div>
+            <div className={styles.whyNameGraphic}>
+              <div className={styles.bigNumber}>
+                5<span className={styles.smallEleven}>11</span>
+              </div>
+              <div className={styles.numberSub}>keV per annihilation photon</div>
             </div>
           </div>
         </div>

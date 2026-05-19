@@ -4,7 +4,7 @@
   /* Brand Colors */
   --primary-blue: #84a3e3;
   --primary-green: #79d9ab;
-  --primary-dark: #3a3f47; /* Darker slate for contrast */
+  --primary-dark: #3a3f47;
   
   /* Neutral Colors */
   --bg-color: #f8fafc;
@@ -33,6 +33,8 @@
   --transition-normal: 300ms ease;
   --transition-slow: 500ms ease;
 }
+
+
 
 * {
   box-sizing: border-box;
@@ -95,4 +97,21 @@ button {
   .section-padding {
     padding: 8rem 0;
   }
+}
+
+/* Google Translate Overrides */
+body {
+  top: 0 !important;
+}
+.skiptranslate iframe {
+  display: none !important;
+}
+#goog-gt-tt {
+  display: none !important;
+}
+.goog-te-spinner-pos {
+  display: none !important;
+}
+.goog-te-spinner-animation {
+  display: none !important;
 }

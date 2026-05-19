@@ -48,6 +48,76 @@ export default function Physicians() {
           </div>
         </div>
       </section>
+      {/* Information for Physicians Section */}
+      <section className={`section-padding ${styles.infoSection}`}>
+        <div className="container">
+          <div className={styles.infoHeader}>
+            <h2>Information for Physicians</h2>
+            <div className={styles.headerDivider}></div>
+            <p>Clinical protocols, referral criteria, therapy pathways, and reporting standards for our referring partners</p>
+          </div>
+          
+          <div className={styles.infoGrid}>
+            {/* Card 1 */}
+            <div className={styles.infoCard}>
+              <h3>How to Refer</h3>
+              <ul className={styles.infoList}>
+                <li>Referral letter on clinic letterhead</li>
+                <li>Clinical indication, diagnosis, relevant history</li>
+                <li>Previous imaging (PET, CT, MRI) if available</li>
+                <li>Current medications (anti-diabetics, SSA, anti-androgens)</li>
+                <li>eGFR mandatory for therapy referrals</li>
+                <li>Haematological parameters for therapy referrals</li>
+                <li>Pregnancy/breastfeeding status</li>
+              </ul>
+              <Button variant="primary" style={{ marginTop: '1.5rem', backgroundColor: '#0e7490', border: 'none', borderRadius: '4px', fontSize: '0.9rem' }} icon={<Download size={16} />}>
+                Download Referral Form
+              </Button>
+            </div>
+            
+            {/* Card 2 */}
+            <div className={styles.infoCard}>
+              <h3>Reporting Standards</h3>
+              <ul className={styles.infoList}>
+                <li>AERB-licensed, board-certified nuclear medicine physicians</li>
+                <li>PERCIST 1.0 for treatment response</li>
+                <li>Deauville/Lugano criteria for lymphoma</li>
+                <li>PROMISE scoring for PSMA PET</li>
+                <li>Krenning scale for somatostatin receptor imaging</li>
+                <li>Structured reports with SUVmax, MTV, TLG on request</li>
+              </ul>
+            </div>
+            
+            {/* Card 3 */}
+            <div className={styles.infoCard}>
+              <h3>Physician Helpline</h3>
+              <ul className={styles.infoList}>
+                <li>Tracer/therapy selection for complex cases</li>
+                <li>Patient preparation queries</li>
+                <li>Therapy eligibility pre-screening</li>
+                <li>Joint report review and MDT support</li>
+                <li>CME sessions and theranostics conferences</li>
+              </ul>
+              <div className={styles.contactText}>
+                +91-7428594511
+              </div>
+            </div>
+            
+            {/* Card 4 */}
+            <div className={styles.infoCard}>
+              <h3>Priority Booking</h3>
+              <ul className={styles.infoList}>
+                <li>Oncology staging prior to surgery or MDT</li>
+                <li>Post-chemotherapy response assessment</li>
+                <li>Therapy planning and dosimetry sessions</li>
+                <li>Biochemical recurrence — urgent PSMA PET</li>
+                <li>F-18 Choline pre-op parathyroid localisation</li>
+                <li>Pre-TAVI cardiac viability assessment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Referral Form Section */}
       <section className={`section-padding ${styles.referralSection}`}>
@@ -142,6 +212,82 @@ export default function Physicians() {
             </form>
           </div>
 
+        </div>
+      </section>
+
+      {/* Quick Indication Reference Section */}
+      <section className={`section-padding ${styles.referenceSection}`}>
+        <div className="container">
+          <h2 className={styles.referenceTitle}>Quick Indication Reference</h2>
+          
+          <div className={styles.tableResponsive}>
+            <table className={styles.referenceTable}>
+              <thead>
+                <tr>
+                  <th>Scan / Therapy</th>
+                  <th>Agent</th>
+                  <th>Key Indications</th>
+                  <th>Key Preparation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>FDG PET-CT</td>
+                  <td>F-18 FDG</td>
+                  <td>Oncology staging, restaging, FUO, sarcoidosis, vasculitis</td>
+                  <td>6hr fast, BG &lt;200 mg/dL</td>
+                </tr>
+                <tr>
+                  <td>Brain PET-CT</td>
+                  <td>F-18 FDG</td>
+                  <td>Dementia, Alzheimer's, epilepsy, neuro-oncology</td>
+                  <td>6hr fast, dim-light rest</td>
+                </tr>
+                <tr>
+                  <td>Cardiac PET</td>
+                  <td>Rb-82 / FDG</td>
+                  <td>Myocardial perfusion, viability, cardiac sarcoidosis</td>
+                  <td>Fasting, stress protocol</td>
+                </tr>
+                <tr>
+                  <td>PSMA PET-CT</td>
+                  <td>Ga-68 PSMA</td>
+                  <td>Prostate Ca staging, biochemical recurrence</td>
+                  <td>No special fast</td>
+                </tr>
+                <tr>
+                  <td>DOTANOC PET-CT</td>
+                  <td>Ga-68 DOTANOC</td>
+                  <td>NETs, phaeochromocytoma, paraganglioma</td>
+                  <td>Hold octreotide 4 weeks</td>
+                </tr>
+                <tr>
+                  <td>F-18 Choline PET</td>
+                  <td>F-18 Choline</td>
+                  <td>Hyperparathyroidism pre-op, persistent/recurrent HPT</td>
+                  <td>No special preparation</td>
+                </tr>
+                <tr>
+                  <td>I-131 Therapy</td>
+                  <td>I-131</td>
+                  <td>Thyroid Ca remnant ablation, metastatic DTC, Graves'</td>
+                  <td>Low-iodine diet 2wks; TSH &gt;30</td>
+                </tr>
+                <tr>
+                  <td>Lu-177 PSMA RLT</td>
+                  <td>Lu-177 PSMA-617</td>
+                  <td>mCRPC post-ARSI and taxane, PSMA-positive</td>
+                  <td>eGFR &gt;40; marrow reserve</td>
+                </tr>
+                <tr>
+                  <td>Lu-177 DOTATATE</td>
+                  <td>Lu-177 DOTATATE</td>
+                  <td>Progressive GEP-NETs, SR-positive tumours</td>
+                  <td>eGFR &gt;40; hold SSA 4wks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </div>

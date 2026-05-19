@@ -1,12 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, Globe } from 'lucide-react';
 import styles from './Navbar.module.css';
 import logo from '../assets/logo.png.png';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [lang, setLang] = useState('en');
+
+  const handleLanguageChange = (e) => {
+    const newLang = e.target.value;
+    setLang(newLang);
+    
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = newLang;
+      select.dispatchEvent(new Event('change'));
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +57,14 @@ export default function Navbar() {
             ))}
           </ul>
           <div className={styles.navActions}>
+            <div className={styles.languageSelector}>
+              <Globe size={18} className={styles.globeIcon} />
+              <select value={lang} onChange={handleLanguageChange} className={styles.langSelect} aria-label="Select Language">
+                <option value="en">EN</option>
+                <option value="hi">HI</option>
+                <option value="pa">PA</option>
+              </select>
+            </div>
             <a href="tel:+918078880788" className={styles.phoneLink}>
               <Phone size={18} />
               <span>+91 80788 80788</span>
@@ -80,6 +100,14 @@ export default function Navbar() {
           ))}
         </ul>
         <div className={styles.mobileNavActions}>
+          <div className={styles.mobileLanguageSelector}>
+            <Globe size={18} className={styles.globeIcon} />
+            <select value={lang} onChange={handleLanguageChange} className={styles.langSelect} aria-label="Select Language">
+              <option value="en">English</option>
+              <option value="hi">हिंदी</option>
+              <option value="pa">ਪੰਜਾਬੀ</option>
+            </select>
+          </div>
           <Link 
             to="/book" 
             className={styles.mobileBookBtn}

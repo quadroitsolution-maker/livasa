@@ -14,23 +14,40 @@ export default function Patients() {
   const faqs = [
     {
       question: "What is a PET-CT scan?",
-      answer: "A PET-CT scan combines two imaging techniques: Positron Emission Tomography (PET) and Computed Tomography (CT). The PET scan shows how your organs and tissues are functioning at a cellular level, while the CT scan provides detailed anatomical pictures. Together, they offer a highly accurate diagnosis."
+      answer: "PET-CT combines two technologies. The PET scan measures metabolic activity by detecting a radioactive tracer (usually FDG — a glucose-like molecule) injected into your vein. The CT provides anatomical detail. Together they pinpoint abnormal activity — cancer, inflammation, neurological changes — with extraordinary precision."
     },
     {
-      question: "How should I prepare for my scan?",
-      answer: "Preparation varies depending on the type of scan. Generally, you will be asked to fast for 4-6 hours before your appointment and avoid strenuous exercise for 24 hours prior. Detailed instructions will be provided when you book your appointment."
+      question: "What is F-18 Choline PET for parathyroid?",
+      answer: "Fluorocholine PET-CT uses F-18 Choline tracer, preferentially taken up by overactive parathyroid glands. It is the most sensitive method to localise parathyroid adenomas in primary hyperparathyroidism — especially when ultrasound and sestamibi have been inconclusive. Provides your surgeon a precise roadmap for minimally-invasive parathyroidectomy."
     },
     {
-      question: "Is the radiation dose safe?",
-      answer: "Yes. The amount of radiation exposure from a PET-CT scan is small and well within safe limits. The benefits of obtaining an accurate diagnosis far outweigh the minimal risks associated with the radiation."
+      question: "Is the radiation safe?",
+      answer: "Yes. Diagnostic tracers use short-lived isotopes with doses comparable to standard CT scans (approx. 7–14 mSv for FDG PET-CT). Therapeutic isotopes (I-131, Lu-177) deliver radiation predominantly to the target tissue. Our team implements full AERB radiation safety protocols for all procedures."
     },
     {
-      question: "How long does the procedure take?",
-      answer: "You should plan to be at our center for about 2 to 3 hours. This includes time for preparation, the injection of the radiotracer, a resting period for the tracer to distribute, and the scan itself (which usually takes 15-30 minutes)."
+      question: "How do I prepare for my PET scan?",
+      answer: (
+        <>
+          <p style={{ marginBottom: '0.5rem' }}>For FDG PET-CT:</p>
+          <ul style={{ paddingLeft: '1.5rem', listStyleType: 'disc' }}>
+            <li>Fast for at least 4–6 hours (water is permitted)</li>
+            <li>Avoid strenuous exercise for 24 hours prior</li>
+            <li>Diabetic patients: call us in advance for specific insulin guidance</li>
+            <li>Avoid caffeine and alcohol for 24 hours</li>
+            <li>Wear comfortable, loose-fitting clothing without metal</li>
+            <li>Bring your referral letter, previous imaging, and photo ID</li>
+            <li>Arrive 30 minutes before your scheduled time</li>
+          </ul>
+        </>
+      )
     },
     {
-      question: "When will my doctor get the results?",
-      answer: "Our specialized radiologists will analyze your images and send a detailed report to your referring physician, typically within 24 to 48 hours."
+      question: "What is I-131 Radioiodine Therapy?",
+      answer: "An oral therapy for thyroid conditions. You swallow a small radioiodine capsule. Because the thyroid and thyroid cancer cells are the only tissues that absorb iodine, radiation is delivered almost exclusively to thyroid tissue. Used post-thyroidectomy, for thyroid cancer spread, Graves' disease and toxic goitre. You stay in our isolation room for 1–3 days per AERB guidelines."
+    },
+    {
+      question: "When will I get my report?",
+      answer: "Reports are delivered the same day for most scans. Urgent cases are prioritised and reported within 4–6 hours on request. Reports are reviewed and signed by board-certified nuclear medicine physicians and delivered digitally (email/WhatsApp) and as hard copy."
     }
   ];
 
@@ -188,7 +205,7 @@ export default function Patients() {
                   />
                 </div>
                 <div className={`${styles.faqAnswer} ${openFaq === index ? styles.open : ''}`}>
-                  <p>{faq.answer}</p>
+                  {typeof faq.answer === 'string' ? <p>{faq.answer}</p> : faq.answer}
                 </div>
               </div>
             ))}

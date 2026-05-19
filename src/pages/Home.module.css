@@ -420,6 +420,188 @@
   box-shadow: var(--shadow-lg);
 }
 
+/* Mission, Vision, Values */
+.missionVisionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .missionVisionGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.missionVisionCard {
+  background: var(--bg-color);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid rgba(132, 163, 227, 0.1);
+}
+
+.missionVisionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(132, 163, 227, 0.3);
+  background: white;
+}
+
+.missionVisionCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.missionVisionCard p {
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+.valuesCard {
+  grid-column: 1 / -1;
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(132, 163, 227, 0.1);
+}
+
+.valuesCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.valuesList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .valuesList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.valuesList li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--primary-dark);
+}
+
+.valuesList li::before {
+  content: "✓";
+  color: var(--primary-green);
+  font-weight: bold;
+}
+
+.valuesFooter {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(132, 163, 227, 0.1);
+}
+
+
 .physicianCta h3, .physicianCta p {
   color: white;
+}
+
+/* Why Name Section */
+.whyNameSection {
+  background-color: var(--bg-color);
+}
+
+.whyNameBanner {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 992px) {
+  .whyNameBanner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+}
+
+.whyNameContent {
+  flex: 1;
+}
+
+.whyNameContent h2 {
+  color: var(--primary-dark);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.highlightName {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlightText {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.whyNameContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 800px;
+}
+
+.whyNameGraphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.bigNumber {
+  font-size: 5rem;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+  font-weight: 700;
+}
+
+.smallEleven {
+  font-size: 3rem;
+  margin-top: 0.25rem;
+}
+
+.numberSub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 0.5rem;
 }
